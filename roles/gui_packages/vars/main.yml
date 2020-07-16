@@ -1,0 +1,6 @@
+gui_packages:
+    - conky
+    - firefox
+    - gimp
+    - terminator
+    - thunderbird

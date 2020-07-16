@@ -1,0 +1,8 @@
+---
+
+  # Tasks file for setup_vim
+  - name: Clone vim plugins
+    git:
+      repo: "{{ item.repo }}"
+      dest: ".vim/pack/plugins/start/{{ item.name }}"
+    loop: "{{ vim_plugins }}"

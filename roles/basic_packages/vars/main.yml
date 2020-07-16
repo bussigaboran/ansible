@@ -1,0 +1,6 @@
+basic_packages:
+    - alpine
+    - git
+    - mercurial
+    - tmux
+    - vim

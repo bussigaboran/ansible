@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  roles:
+    - roles/basic_packages
+    - roles/gui_packages
+    - roles/setup_vim
+      #- roles/git_repos

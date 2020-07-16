@@ -1,0 +1,5 @@
+vim_plugins:
+  - { name: "ale", repo: "https://github.com/dense-analysis/ale.git"}
+  - { name: "calendar-vim", repo: "https://github.com/mattn/calendar-vim.git"}
+  - { name: "nerdtree", repo: "https://github.com/preservim/nerdtree.git"}
+  - { name: "vimwiki", repo: "https://github.com/vimwiki/vimwiki.git"}

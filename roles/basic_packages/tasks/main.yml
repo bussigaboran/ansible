@@ -1,0 +1,9 @@
+---
+
+  - name: Install basic packages
+    become: yes
+    apt:
+      name: "{{ item }}"
+      update_cache: no
+      state: present
+    loop: "{{ basic_packages }}"

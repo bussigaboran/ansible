@@ -1,0 +1,9 @@
+---
+
+  - name: Install gui packages
+    become: yes
+    apt:
+      name: "{{ item }}"
+      update_cache: no
+      state: present
+    loop: "{{ gui_packages }}"
