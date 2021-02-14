@@ -1,0 +1,12 @@
+---
+   - name: Clone git repositories
+     git:
+       repo: "{{ item.repo }}"
+       dest: "repos/git/{{ item.name }}"
+     loop: "{{ git_repos }}"
+
+#   - name: Clone mercurial repositories
+#     hg:
+#       repo: "{{ item.repo }}"
+#       dest: "repos/hg/{{ item.name }}"
+#     loop: "{{ hg_repos }}"

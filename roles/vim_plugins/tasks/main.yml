@@ -1,6 +1,5 @@
 ---
 
-  # Tasks file for setup_vim
   - name: Clone vim plugins
     git:
       repo: "{{ item.repo }}"

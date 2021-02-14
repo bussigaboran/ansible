@@ -1,0 +1,13 @@
+---
+   - name: Create symbolic link 
+     file:
+       src: "repos/git/dotfiles/{{ item }}"
+       path: "{{ item }}"
+       state: link
+       force: yes
+     loop:
+       - .bash_aliases
+       - .bash_profile
+       - .bashrc
+       - .vimrc
+

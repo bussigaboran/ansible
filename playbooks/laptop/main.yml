@@ -1,8 +1,9 @@
 ---
 
-- hosts: all
+- hosts: laptop
   roles:
     - roles/basic_packages
+    - roles/git_repos
+    - roles/setup_dotfiles
     - roles/gui_packages
-    - roles/setup_vim
-      #- roles/git_repos
+    - roles/vim_plugins
