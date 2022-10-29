@@ -6,8 +6,8 @@
        state: link
        force: yes
      loop:
+       - .vimrc
        - .bash_aliases
        - .bash_profile
        - .bashrc
-       - .vimrc
 

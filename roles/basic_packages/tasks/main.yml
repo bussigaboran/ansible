@@ -4,6 +4,6 @@
     become: yes
     apt:
       name: "{{ item }}"
-      update_cache: no
+      update_cache: yes
       state: present
     loop: "{{ basic_packages }}"

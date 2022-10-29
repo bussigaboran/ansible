@@ -1,0 +1,31 @@
+---
+
+  - name: Install packages for temperature monitoring
+    become: yes
+    apt:
+      name: "{{ item }}"
+      update_cache: no
+      state: present
+    loop: "{{ temperature_packages }}"
+
+
+
+  - name: Creating a file with content
+    become: yes
+    copy:
+      dest: "/etc/init.d/temperature.sh"
+      content: |
+       case "$1" in
+          start)
+            /usr/bin/owfs -C -uall -m /mnt/1wire --allow_other
+            #/opt/owfs/bin/owfs --i2c=ALL:ALL --allow_other /mnt/1wire
+            ;;
+          stop)
+            umount /mnt/1wire
+            ;;
+          *)
+            echo "Usage: $0 [start|stop"
+            exit 1
+            ;;
+       esac
+ 

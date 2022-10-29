@@ -1,0 +1,10 @@
+---
+
+- hosts: rpi
+  roles:
+    - roles/basic_packages
+    - roles/1wire
+    - roles/git_repos
+    #- roles/setup_dotfiles
+    # - roles/gui_packages
+    - roles/vim_plugins
